@@ -1,0 +1,23 @@
+{
+  "name": "authcodes",
+  "version": "1.0.0",
+  "description": "Create, Check, and Expire one-time-use authorization codes",
+  "main": "lib/authcodes",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/authcodes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/daplie/authcodes.git"
+  },
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com/)",
+  "license": "Apache-2.0",
+  "homepage": "https://bitbucket.org/daplie/authcodes#readme",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "human-readable-ids": "^1.0.1"
+  }
+}
