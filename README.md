@@ -6,6 +6,12 @@ Create, Check, and Expire one-time-use authorization codes
 Install & Usage
 =======
 
+```bash
+npm install --save https://github.com/OAuth3/node-authcodes.git
+```
+
+**Setup**
+
 ```javascript
 'use strict';
 
@@ -16,12 +22,11 @@ var storage = {
 };
 
 var Codes = require('../lib/authcodes').create(storage)
+```
 
-//
-// Examples
-//
+**Create an Auth Code**
 
-
+```javascript
 //
 // Create an Auth Code
 //
@@ -39,10 +44,14 @@ Codes.create({
   // }
 
 });
+```
 
+**Validate an Auth code** (DOES NOT DESTROY by default)
 
+```javascript
 //
-// Validate an Auth code (DOES NOT DESTROY)
+// Validate an Auth code
+// DOES NOT DESTROY by default
 //
 Codes.validate('xxx...', '123-456', {
   checkId: 'john@example.com' // must match create, if defined
@@ -60,8 +69,11 @@ Codes.validate('xxx...', '123-456', {
   console.error(err.message);
 
 });
+```
 
+**Destroy an auth code**
 
+```javascript
 //
 // As if it never even happened
 //
