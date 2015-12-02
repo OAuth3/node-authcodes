@@ -1,8 +1,12 @@
 function run(opts) {
+  var Mq = require('masterquest-sqlite3');
+  var sqlite3 = require('sqlite3');
+
+  return Mq.wrap(new sqlite3.Database('/tmp/authcodes.sqlite3'), opts);
+
+  /*
   var config = require('../config.test.js');
   var sqlite3 = require('sqlite3-cluster');
-  var wrap = require('masterquest-sqlite3');
-
   var promise = sqlite3.create({
       standalone: true
     , bits: 128
@@ -15,6 +19,7 @@ function run(opts) {
   }).then(function (db) {
     return wrap.wrap(db, opts);
   });
+  */
 
   /*
   if (require.main === module) {
