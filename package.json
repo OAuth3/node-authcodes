@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/daplie/authcodes.git"
+    "url": "git://github.com/OAuth3/node-authcodes.git"
   },
-  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com/)",
-  "license": "Apache-2.0",
-  "homepage": "https://bitbucket.org/daplie/authcodes#readme",
+  "author": "AJ ONeal <coolaj86@gmail.com> (https://coolaj86.com/)",
+  "license": "(MIT OR Apache-2.0)",
+  "homepage": "https://github.com/OAuth3/node-authcodes",
   "dependencies": {
-    "bluebird": "^2.9.34",
+    "bluebird": "^3.0.6",
     "human-readable-ids": "^1.0.1"
   }
 }
