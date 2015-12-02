@@ -19,5 +19,9 @@
   "dependencies": {
     "bluebird": "^3.0.6",
     "human-readable-ids": "^1.0.1"
+  },
+  "devDependencies": {
+    "masterquest-sqlite3": "^1.0.0",
+    "sqlite3": "^3.1.1"
   }
 }
