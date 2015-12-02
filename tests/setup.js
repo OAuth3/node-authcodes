@@ -1,7 +1,7 @@
 function run(opts) {
   var config = require('../config.test.js');
   var sqlite3 = require('sqlite3-cluster');
-  var wrap = require('dbwrap');
+  var wrap = require('masterquest-sqlite3');
 
   var promise = sqlite3.create({
       standalone: true
@@ -13,7 +13,7 @@ function run(opts) {
   return promise.then(function (db) {
     return db.init({ bits: 128, key: config.key });
   }).then(function (db) {
-    return wrap.wrap(db, Array.isArray(opts) && opts || { idname: 'uuid', tablename: opts && opts.tablename || 'authn' });
+    return wrap.wrap(db, opts);
   });
 
   /*

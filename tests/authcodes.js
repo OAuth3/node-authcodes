@@ -146,8 +146,8 @@ function init(Codes) {
 
 module.exports.create = function () {
 
-  require('./setup').run({ tablename: 'codes' }).then(function (DB) {
-    return init(require('../lib/authcodes').create(DB));
+  require('./setup').run([{ modelname: 'Codes', idname: 'uuid' }]).then(function (Db) {
+    return init(require('../lib/authcodes').create(Db.Codes));
   });
 };
 
